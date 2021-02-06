@@ -13,11 +13,17 @@ class About extends React.Component {
     }
     render() {
         const { items } = this.props;
+        const listItems = items.map((item) => 
+        <div key={item.id}>
+            <p>{item.title}</p>
+            <p>{item.author}</p>
+            <p>{item.publcation}</p>
+        </div>)
         
         return (
             <div>
                 <h1>Node.js Server Side Render in the Age of APIs</h1>
-                    { items.map((post) => 
+                    {/* { items.map((post) => 
                        <div>
                             <ul>
                                 <li>{ post.title }</li>
@@ -25,7 +31,11 @@ class About extends React.Component {
                                 <li>{ post.publcation }</li>
                             </ul>
                        </div>
-                    )}
+                    )} */}
+                    <div>
+                        {listItems}
+                        <hr />
+                    </div>
             </div>
         );
     }
