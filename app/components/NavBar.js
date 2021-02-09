@@ -1,16 +1,29 @@
-import './Header.scss';
+import Link from 'next/link';
 
-const navBarStyle = {
-    backgroundColor: "red",
-    color: "white",
-    width: "100%",
-    height: "60px"
-  };
-  
+
   const NavBar = () => (
-    <div className="NavBar" style={navBarStyle}>
-      NAVBAR
-    </div>
+    
+      <div className="col-3 menu">
+        <ul>
+          
+          <Link href="/" passHref>
+              <li>Home</li>
+          </Link>
+
+          <Link href="/about" passHref>
+            <li>Show All Books </li>
+          </Link>
+          
+          <li>City</li>
+          <li>Island</li>
+          <Link href="/" passHref >
+            <li>Flood</li>
+          </Link>
+          
+        </ul>
+        
+      </div>
+    
   );
   
   export default NavBar;

@@ -22,12 +22,8 @@ class About extends React.Component {
         
         return (
             <Layout>
-                <div>
-                <h1>Node.js Server Side Render in the Age of APIs</h1>
-                    <div>
-                        {listItems}
-                        <hr />
-                    </div>
+                <div className="col-6">
+                    {listItems}
                 </div>
             </Layout>      
         );
